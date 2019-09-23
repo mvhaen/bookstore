@@ -1,6 +1,7 @@
 import { AppPage } from './app.po';
 import { browser, logging } from 'protractor';
 
+
 describe('workspace-project App', () => {
   let page: AppPage;
 
@@ -11,6 +12,16 @@ describe('workspace-project App', () => {
   it('should display welcome message', () => {
     page.navigateTo();
     expect(page.getTitleText()).toEqual('Welcome to bookstore!');
+  });
+
+  it('should display the correct book title', () => {
+    page.navigateTo();
+    expect(page.getBookTitle()).toEqual('The Emperor\'s Blades');
+  });
+
+  it('should display the correct author', () => {
+    page.navigateTo();
+    expect(page.getAuthorName()).toEqual('Brian Stavely');
   });
 
   afterEach(async () => {

@@ -107,7 +107,9 @@
               "e2e/tsconfig.json"
             ],
             "exclude": [
-              "**/node_modules/**"
+              "**/node_modules/**",
+              "**/*.helper.ts",
+              "**/*.story-e2e.ts"
             ]
           }
         },

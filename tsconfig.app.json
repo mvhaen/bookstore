@@ -13,6 +13,9 @@
   ],
   "exclude": [
     "src/test.ts",
-    "src/**/*.spec.ts"
+    "src/**/*.spec.ts",
+    "src/**/*.helper.ts",
+    "src/**/*.story-e2e.ts",
+    "**/*.stories.ts"
   ]
 }
