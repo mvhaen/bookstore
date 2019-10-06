@@ -1,0 +1,25 @@
+:host {
+    margin: 20px;
+    display: block;
+    width: 170px;
+
+    & > * {
+        margin-bottom: 5px;
+    }
+}
+
+.cover {
+    width: 100%;
+    img {
+        width: 100%;
+    }
+    
+}
+
+.title {
+    font-weight: bold;
+}
+
+.price {
+    color: red;
+}

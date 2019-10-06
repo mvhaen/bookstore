@@ -16,5 +16,6 @@ export class AppComponent {
       name: 'Brian Stavely'
     },
     cover: 'https://images-na.ssl-images-amazon.com/images/I/517dR9S8T4L.jpg',
-  }
+    price: 18.90
+  };
 }

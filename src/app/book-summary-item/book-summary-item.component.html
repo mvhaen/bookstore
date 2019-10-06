@@ -1,3 +1,6 @@
-<div class="book-summary-item--cover"><img [src]="book.cover"></div>
-<div class="book-summary-item--title">{{book.title}}</div>
-<div class="book-summary-item--author">{{book.author.name}}</div>
+<div class="cover"><img [src]="book.cover"></div>
+<div class="author">{{book.author.name}}</div>
+<div class="title">{{book.title}}</div>
+<div class="price">&euro; {{book.price}}</div>
+<button (click)="buy.emit($event)">Buy</button>
+

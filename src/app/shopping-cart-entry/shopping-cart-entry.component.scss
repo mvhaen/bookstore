@@ -1,0 +1,23 @@
+:host {
+    display: flex;
+    width: 100%;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.spacer-3x {
+    flex-grow: 3;
+}
+
+.amount-container {
+    * {
+        margin: 10px;
+    }
+}
+
+.spacer-1x {
+    flex-grow: 1;
+}
+

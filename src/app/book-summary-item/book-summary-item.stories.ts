@@ -1,21 +1,25 @@
+import { action } from '@storybook/addon-actions';
+
 import { BookSummaryItemComponent } from './book-summary-item.component';
+import { EmperorsBladesMock } from '../mocks/EmperorsBlades.mock';
+import { TheProvidenceOfFireMock } from '../mocks/TheProvidenceOfFire.mock';
 
 export default {
   title: 'Book Summary Item',
 };
 
-
-export const title = () => ({
+export const EmperorsBlades = () => ({
   component: BookSummaryItemComponent,
   props: {
-    book: {
-      id: '1',
-      title: 'The Emperor\'s Blades',
-      author: {
-        id: '1',
-        name: 'Brian Stavely'
-      },
-      cover: 'https://images-na.ssl-images-amazon.com/images/I/517dR9S8T4L.jpg',
-    }
-  },
+    book: EmperorsBladesMock,
+    buy: () => alert('you clicked Emperor\'s Blades'),
+  }
+});
+
+export const TheProvidenceOfFire = () => ({
+  component: BookSummaryItemComponent,
+  props: {
+    book: TheProvidenceOfFireMock,
+    buy: () => alert('you clicked The Providence Of Fire'),
+  }
 });

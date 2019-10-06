@@ -1,0 +1,17 @@
+:host {
+    display: flex;
+    flex-direction: column;
+}
+
+.total-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.total {
+    font-weight: bold;
+}
+
+.spacer-1x {
+    flex-grow: 1;
+}

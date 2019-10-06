@@ -1,0 +1,6 @@
+<app-shopping-cart-entry *ngFor="let item of cart.items" [item]="item">
+
+</app-shopping-cart-entry>
+<div class="total-row">
+    <span class="spacer-1x"></span><span class="total">{{cart.total}}</span>
+</div>

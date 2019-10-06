@@ -2,6 +2,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BookSummaryItemComponent } from './book-summary-item.component';
 
+import { EmperorsBladesMock } from '../mocks/EmperorsBlades.mock';
+
 describe('BookSummaryItemComponent', () => {
   let component: BookSummaryItemComponent;
   let fixture: ComponentFixture<BookSummaryItemComponent>;
@@ -16,6 +18,7 @@ describe('BookSummaryItemComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(BookSummaryItemComponent);
     component = fixture.componentInstance;
+    component.book = EmperorsBladesMock;
     fixture.detectChanges();
   });
 
