@@ -10,7 +10,10 @@ export default {
 export const EmperorsBlades = () => ({
   component: ShoppingCartEntryComponent,
   props: {
-    item: EmperorsBladesShoppingCartItemMock,
+    item: EmperorsBladesShoppingCartItemMock
+  },
+  attributes: {
+    id: 'emperors-blades'
   }
 });
 

@@ -1,9 +1,8 @@
 <span class="title">{{item.book.title}}</span>
 <span class="spacer-3x"></span>
 <span class="amount-container">
-    <span class="min">-</span>
+    <span class="min" (click)="onDecrement()">-</span>
     <span class="amount">{{item.amount}}</span>
-    <span class="plus">+</span>    
+    <span class="plus" (click)="onIncrement()">+</span>    
 </span>
-<span class="spacer-1x"></span>
-<span class="total">{{item.total}}</span>
+<span class="total">{{item.total | currency: 'EUR'}}</span>

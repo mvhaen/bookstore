@@ -8,10 +8,14 @@ import { IBookModel } from '../models/IBookModel';
 })
 export class BookSummaryItemComponent implements OnInit {
   @Input() book: IBookModel;
-  @Output() buy: EventEmitter<any> = new EventEmitter();
+  @Output() buy: EventEmitter<IBookModel> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {}
 
+  onBuy() {
+    console.log('onBuy', this.book);
+    this.buy.emit(this.book);
+  }
 }

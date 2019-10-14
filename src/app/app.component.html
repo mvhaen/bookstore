@@ -2,6 +2,8 @@
   Welcome to {{ title }}!
 </h1>
 
-<app-book-summary-item [book]="book"></app-book-summary-item>
-
-<router-outlet></router-outlet>
+<content>
+  <app-book-gallery [books]="books" (buy)="buy($event)"></app-book-gallery>
+  <app-shopping-cart [cart]="cart" (increment)="increment($event)" (decrement)="decrement($event)"></app-shopping-cart>
+  <router-outlet></router-outlet>  
+</content>

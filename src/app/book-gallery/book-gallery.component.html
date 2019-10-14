@@ -1,1 +1,1 @@
-<p>book-gallery works!</p>
+<app-book-summary-item *ngFor="let book of books" id="book-summary-item-{{book.id}}" [book]="book" (buy)="onBuy($event)"></app-book-summary-item>

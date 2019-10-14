@@ -1,0 +1,15 @@
+content {
+    display: flex;
+    flex-direction: row;
+
+    border-top: 1px solid lightgray;
+    padding: 10px;
+}
+
+app-book-gallery {
+    flex-grow: 1;
+}
+
+app-shopping-cart {
+    width: 700px;
+}

@@ -8,6 +8,8 @@ import { BookGalleryComponent } from './book-gallery/book-gallery.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { ShoppingCartEntryComponent } from './shopping-cart-entry/shopping-cart-entry.component';
+import { StoreModule } from '@ngrx/store';
+import { shoppingCartReducer } from './reducers/shoppingcart.reducer';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { ShoppingCartEntryComponent } from './shopping-cart-entry/shopping-cart-
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.forRoot({ shoppingCart: shoppingCartReducer })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { IShoppingCartItemModel } from '../models/IShoppingCartItemModel';
 
 @Component({
@@ -8,10 +8,21 @@ import { IShoppingCartItemModel } from '../models/IShoppingCartItemModel';
 })
 export class ShoppingCartEntryComponent implements OnInit {
   @Input() item: IShoppingCartItemModel;
+  @Output() increment: EventEmitter<IShoppingCartItemModel> = new EventEmitter();
+  @Output() decrement: EventEmitter<IShoppingCartItemModel> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onIncrement() {
+    console.log('onIncrement');
+    this.increment.emit(this.item);
+  }
+
+  onDecrement() {
+    this.decrement.emit(this.item);
   }
 
 }

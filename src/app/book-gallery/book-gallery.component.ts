@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { IBookModel } from '../models/IBookModel';
 
 @Component({
   selector: 'app-book-gallery',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./book-gallery.component.scss']
 })
 export class BookGalleryComponent implements OnInit {
+  @Input() books: IBookModel[];
+  @Output() buy: EventEmitter<IBookModel> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onBuy(book: IBookModel) {
+    console.log('onBuy++', book);
+    this.buy.emit(book);
   }
 
 }

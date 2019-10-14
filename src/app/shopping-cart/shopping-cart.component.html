@@ -1,6 +1,10 @@
-<app-shopping-cart-entry *ngFor="let item of cart.items" [item]="item">
-
-</app-shopping-cart-entry>
-<div class="total-row">
-    <span class="spacer-1x"></span><span class="total">{{cart.total}}</span>
+<h2>Shopping cart</h2>
+<div *ngIf="cart.items.length === 0">
+    <h4>Buy one of the books on the left to add books to the shopping cart.</h4>
+</div>
+<div *ngIf="cart.items.length > 0">
+    <app-shopping-cart-entry *ngFor="let item of cart.items" id="shopping-cart-entry-{{item.book.id}}" [item]="item" (increment)="onIncrement($event)" (decrement)="onDecrement($event)"></app-shopping-cart-entry>
+    <div class="total-row">
+        <span class="spacer-1x"></span><span class="total">{{cart.total | currency: 'EUR'}}</span>
+    </div>    
 </div>
